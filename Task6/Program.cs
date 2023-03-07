@@ -41,18 +41,18 @@ int[,] CreatTwoDimensionArray(int firstLength, int secondLength)
 
 int GetSumElement(int [,] array) // меняем четные на их квадрат
 {
+  int min = array.GetLength(0);
+
+  if (array.GetLength(1) < min)
+  {
+    min = array.GetLength(1);
+  }
+
   int sum = 0;
 
-  for (int i = 0; i < array.GetLength(0); i++)
+  for (int i = 0; i < min; i++)
   {
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-      if (i == j)
-      {
-        sum = sum + array[i, j];
-      }
-      
-    }
+    sum = sum + array[i,i];
   }
 
   return sum; 
