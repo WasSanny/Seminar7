@@ -39,7 +39,7 @@ int[,] CreatTwoDimensionArray(int firstLength, int secondLength)
   return result;
 }
 
-int GetSumElement(int [,] array) // меняем четные на их квадрат
+int GetSumElement(int [,] array) // считаем сумму по диагонали
 {
   int min = array.GetLength(0);
 
